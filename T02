@@ -1,0 +1,19 @@
+function removeUndefinedOrNullProperties(obj) {
+    for (let key in obj) {
+        if (obj[key] === undefined || obj[key] === null) {
+            delete obj[key];
+              return obj;
+// مثال استفاده:
+let obj = {
+    a: 1,
+    b: null,
+    c: "Hello",
+    d: undefined,
+    e: 5
+console.log("قبل از حذف:");
+console.log(obj);
+
+removeUndefinedOrNullProperties(obj);
+
+console.log("بعد از حذف:");
+console.log(obj);
